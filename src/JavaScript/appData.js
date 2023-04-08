@@ -89,8 +89,7 @@ const applicationData = [
 ]
 
 applicationData.forEach((ele, index) => {
-  console.log(index < 10 ? "0" + (index + 1) : (index + 1))
   ele.image = `https://cdn.jsdelivr.net/gh/simpletonX/simpletonX.github.io@main/src/images/app-data/${
-    index < 10 ? "0" + (index + 1) : (index + 1)
+    index < 11 ? "0" + (index + 1) : (index + 1)
   }.jpg`
 })
