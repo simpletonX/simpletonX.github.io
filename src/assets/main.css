@@ -1,0 +1,147 @@
+
+body {
+  height: 100vh;
+  background: center center no-repeat;
+  background-size: cover;
+  transition: 0s;
+}
+
+.container {
+  width: 900px;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+  opacity: 0;
+  top: calc(50vh - 300px);
+  background-color: rgba(255,255,255,0.5);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container[data-state="ready"] {
+  opacity: 1;
+  animation: upSlide .4s;
+}
+
+.container-nav-column {
+  width: 27%;
+  height: 100%;
+  background-color: rgba(255,255,255, .5);
+}
+
+.container-nav-column .header {
+  height: 35%;
+}
+
+.container-nav-column .head-sculpture {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: .2s;
+  position: relative;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,.1);
+}
+
+.container-nav-column .head-sculpture:hover {
+  transform: scale(.96);
+}
+
+.container-nav-column .head-sculpture img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.container-nav-column .nickname, .container-nav-column .description {
+  width: 100%;
+  text-align: center;
+}
+
+.container-nav-column .nickname {
+  font-size: 18px;
+  font-family: var(--themefont);
+}
+
+.container-nav-column .description {
+  font-size: 12px;
+  font-family: var(--lessfont);
+  color: rgba(0,0,0,.4);
+}
+
+.container-nav-column .main-navigation {
+  position: relative;
+  height: calc(65% - 1px);
+  padding: 20px;
+}
+
+.navigation-item {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.navigation-item img {
+  margin-right: 10px;
+  width: 18px;
+}
+
+.navigation-item .label {
+  font-size: var(--font-minSize);
+  font-family: var(--themefont);
+  margin-left: 5px;
+  border: 1px solid rgba(0,0,0,.1);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.slide-block {
+  width: calc(100% - 40px);
+  height: 44px;
+  background-color: rgba(0,0,0,.05);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border-radius: 6px;
+  transition: .2s;
+  animation: downSlide .4s;
+  animation-fill-mode: backwards;
+  animation-delay: .4s;
+}
+
+.des-block {
+  width: 2px;
+  height: 14px;
+  position: absolute;
+  left: 28px;
+  top: 0;
+  background-color: rgba(0,0,0,.3);
+  transition: .6s;
+  border-radius: 10px;
+  animation: downSlide .6s;
+  animation-fill-mode: backwards;
+  animation-delay: .6s;
+}
+
+.container-content {
+  width: 73%;
+  height: 100%;
+  position: relative;
+}
+
+.loading {
+  position: absolute;
+}
+
+#page_frame {
+  width: 100%;
+  height: 100%;
+}

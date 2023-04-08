@@ -1,0 +1,199 @@
+/*
+  # Simple-element assembly v1.0.0
+  # v1.0.0 - @Simpleton-element
+  # @Alligator web-ui-element
+  # author: wx(FordjQuery) | qq(2499857343@qq.com)
+  # update: 2023-04-03
+*/
+
+:root {
+  --themeColor: #151515;
+  --themefont: Candara, Arial, Symbol, sans-serif, -apple-system;
+  --lessfont: Bahnschrift, Arial, Symbol, sans-serif, -apple-system;
+  --scrollPadding: 20px;
+  --font-minSize: 12px;
+  --font-defaultSize: 14px;
+  --font-maxSize: 16px;
+  --min-unit: 10px;
+  --default-unit: 20px;
+  --max-unit: 30px;
+}
+
+html {
+  font-size: 16px;
+}
+
+/*scroll bar default*/
+
+
+* {
+  outline: none;
+  transition: all .3s;
+  background-color: transparent;
+  text-decoration: none;
+  font-family: var(--themefont);
+  font-size: var(--font-defaultSize);
+  color: var(--themeColor);
+  vertical-align: middle;
+  list-style: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.default-scroll {
+  padding-right: var(--scrollPadding);
+}
+.default-scroll::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+.default-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,.06);
+  border-radius: 10px;
+}
+
+
+/*margin & padding*/
+.ml-5 { margin-left: 5px }
+.mr-5 { margin-right: 5px }
+.mt-5 { margin-top: 5px }
+.mb-5 { margin-bottom: 5px }
+
+.ml-10 { margin-left: 10px }
+.mr-10 { margin-right: 10px }
+.mt-10 { margin-top: 10px }
+.mb-10 { margin-bottom: 10px }
+
+.ml-15 { margin-left: 15px }
+.mr-15 { margin-right: 15px }
+.mt-15 { margin-top: 15px }
+.mb-15 { margin-bottom: 15px }
+
+.ml-20 { margin-left: 20px }
+.mr-20 { margin-right: 20px }
+.mt-20 { margin-top: 20px }
+.mb-20 { margin-bottom: 20px }
+
+.m-5 { margin: 5px }
+.m-10 { margin: 10px }
+.m-15 { margin: 15px }
+.m-20 { margin: 20px }
+
+
+/*flex layout*/
+.flex { display: flex }
+
+.flex-wrap { flex-wrap: wrap }
+
+.x-center { justify-content: center }
+
+.x-space { justify-content: space-between }
+
+.x-start { justify-content: flex-start }
+
+.x-end { justify-content: flex-end }
+
+.y-center { align-items: center }
+
+.y-start { align-items: flex-start }
+
+.y-end { align-items: flex-end }
+
+.ys-center { align-content: center }
+
+.ys-space { align-content: space-between }
+
+.ys-start { align-content: flex-start }
+
+.ys-end { align-content: flex-end }
+
+.flex-xy-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-xys-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.flex-x-space-y-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-x-space-ys-center {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+
+/*split line*/
+.split-line {
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, rgba(30,91,130,.1), transparent);
+}
+
+
+/*default text style*/
+b, em {
+  display: block;
+}
+b {
+  font-weight: 500;
+  font-size: var(--font-defaultSize);
+  font-family: Arial, sans-serif;
+}
+
+em {
+  font-size: var(--font-minSize);
+  font-style: normal;
+  color: rgba(0,0,0,.4);
+}
+
+
+/*loading*/
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.loading.true {
+  display: flex;
+}
+
+.loading svg > :nth-child(1) {
+  transform-origin: center center;
+  animation: 1s rotateLeft infinite;
+}
+
+.loading svg > :nth-child(2) {
+  transform-origin: center center;
+  animation: 1s rotateRight infinite;
+}
+
+.loading .load-text {
+  margin-left: 10px;
+  font-family: Candara, sans-serif;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  color: #1e5b82;
+}
+
+.loading .load-text span {
+  animation: opacity 1s infinite;
+  opacity: 0;
+}
