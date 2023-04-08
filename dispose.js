@@ -20,9 +20,9 @@ const global_ = {
       }
     })
   },
-  wallpaper: "./src/images/default.jpg",
+  wallpaper: "https://gitee.com/hdf3243/images/raw/master/images/default.jpg",
   person_header: {
-    head_sculpture_path: "./src/images/head_sculpture.jpg",
+    head_sculpture_path: "https://gitee.com/hdf3243/images/raw/master/images/head_sculpture.jpg",
     nickname: "JavaScript God",
     description: "God's Language."
   },
