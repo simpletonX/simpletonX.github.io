@@ -20,9 +20,9 @@ const global_ = {
       }
     })
   },
-  wallpaper: "https://raw.githubusercontent.com/simpletonX/simpletonX.github.io/main/src/images/default.jpg",
+  wallpaper: "https://cdn.jsdelivr.net/gh/simpletonX/simpletonX.github.io@main/src/images/default.jpg",
   person_header: {
-    head_sculpture_path: "https://raw.githubusercontent.com/simpletonX/simpletonX.github.io/main/src/images/head_sculpture.jpg",
+    head_sculpture_path: "https://cdn.jsdelivr.net/gh/simpletonX/simpletonX.github.io@main/src/images/head_sculpture.jpg",
     nickname: "JavaScript God",
     description: "God's Language."
   },
